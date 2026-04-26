@@ -11,6 +11,6 @@
     ```
 
 # Como iniciar um projeto fullstack?
-   ##  Podemos começar escolhendo entre duas opções de estruturação de projeto:
-  * Um único repositório (monorepo)    
-  * Dois repositórios 
+   -  Podemos começar escolhendo entre duas opções de estruturação de projeto:
+      * Um único repositório (monorepo)    
+      * Dois repositórios 
