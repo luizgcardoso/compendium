@@ -6,7 +6,7 @@
         npm init -y
 
         // Esse comando instala a ferrementa e salva como dependencia de desenvolvimento. Ex: typescript
-        npm install --save-dev tipescript @types/nodes
+        npm install --save-dev typescript @types/node
 
     ```
 
