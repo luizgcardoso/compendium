@@ -1,9 +1,7 @@
 
-# ENGENHARIA DE PROMPT
+# ENGENHARIA DE PROMPT - Eficiência, Controle e Escalabilidade no uso de IA.
 
-Eficiência, Controle e Escalabilidade no uso de IA.
-
-## Boas Práticas:
+## Boas Práticas na criação de prompt:
 - Ser específico (objetivo);
 - Ser descritivo (sem deixar de ser específico);
 - Reforçar o pedido;
@@ -16,7 +14,7 @@ Eficiência, Controle e Escalabilidade no uso de IA.
  <br><br>Na hora de criar um prompt, pense:<br>
 - *" como eu faria? "* - o que pediria para alguém (especialista) fazer...<br><br>
 - *" faça o simples "*  - não complique além do necessário<br><br>
-- **Dica:** Começe a partir dos modelos mais caros, pois os mais baratos vão conseguir refinar <br>
+- **Dica:** Começe a partir dos modelos mais caros para raciocínios complexos, e use os mais baratos para refinar <br>
 
 ## PROMPT
 
@@ -39,15 +37,14 @@ Exemplo de extrutura para criação eficiente de prompt:<br><br>
 * Prompt Inicial;
 * Testar outros exemplos;
 * Refinar o prompt;
-* Colocar em produção;
- <br>
+* Colocar em produção;<br> 
 ## Técnicas
 
 - Arquivos Markdown (.md) para prompts bem detalhados/especificados.
     - As LLMs entendem melhor um prompt bem formatado e estruturado/organizado.
 
 - Tag XML <Transcrição>: possibilita a atribuição de textos longos e isolando os diferentes contextos:
-    * **DICA IMPORTANTE:** Inclua o arquivo antes (acima) da instruçao de analise.
+    * **DICA IMPORTANTE:** Inclua o arquivo antes (acima) da instrução.
 
     ```
     <Transcrição>
@@ -69,9 +66,9 @@ Exemplo de extrutura para criação eficiente de prompt:<br><br>
     ```
     
 - Prompt do Sistema: configuração do sistema ferramenta da IA - ajuda na interpretação correta dos prompts.
-- Zero Shot - Zero "Exemplos": prompt sem exemplo, e pergunta/solicitação direta;
+- Zero Shot - Zero "Exemplos": prompt sem exemplo; pergunta/solicitação direta;
 - DSP - Directional Stimilus Prompting: é uma técnica que direciona o prompt através de estímulos (dicas, exemplos).
-- Few Shot: Incluir no prompt vários exemplos para que o modelo tenha referências/estímulos (pode ser tanto exemplo positivos, quanto exemplos negativos)
+- Few Shot: Incluir no prompt vários exemplos para que o modelo tenha referências/estímulos (pode ser tanto exemplos positivos, quanto exemplos negativos)
 - CoT (Chain-of-Thought): Cadeia de Pensamento para racíocinios lógicos mais complexos... Instruir o modelo a pensar explicitamente, passo a passo...
     - **Dica:** Usar contextos diferentes como <Thinking> para os pensamentos do modelo e <Answer> para as respostas produzidas.
 - CCoT (Contrastive Chain-of-Thought): instruir a forma correta e a errada sobre como analisar/resolver algo.
@@ -83,17 +80,17 @@ Exemplo de extrutura para criação eficiente de prompt:<br><br>
 - SoT (Skeleton of Thought): acelera e organiza as respostas do modelo; antes de expandir detalhando a resposta definitiva, o modelo traz uma lista de possibilidades, tópicos, processo de raciocinio (brainstorm) para analise prévia.<br>
     ***Essa técnica economiza tokens e contexto!***
 - GKP - Geração de Conhecimento por prompt: orientar o modelo a listar fatos ou conceitos fundamentais sobre um tema antes de executar a tarefa final, garantindo respostas mais precisas, informadas e estruturadas.
-- Prompt Maiuetico: instruir o modelo a justificar a sua resposta com a finalidade de identificar possíveis erros ou falhas e para que possa melhorar a resposta.
-- RAG - Geração Aumentada de Recuperação: objetiva resolver o problema de limitação do contexto, combinando bases de dados externas de conhecimento para aumentar a resposta e produzir respostas melhores.
+- Prompt Maiêutico : instruir o modelo a justificar a sua resposta com a finalidade de identificar possíveis erros ou falhas e para que possa melhorar a resposta.
+- RAG - Geração Aumentada de Recuperação: objetiva resolver o problema de limitação do contexto, combinando bases de dados externas de conhecimento para aumentar e melhorar respostas.
 - PAL - Linguagem Progamática Assistida: incluir técnicas de linguagem de programação ao prompt; exemplo: incluir variáveis em meio as cadeias de pensamento. 
 -ReAct: instruir o modelo a raciocinar o que cada umas das ações implica antes de executá-las.
 
 ### Técnicas para evitar Alucinações:
 - Configurar a ferramenta/modelso para que:
-    - informe caso não saibam a resposta e não invete informações;
+    - informe caso não saiba a resposta e não invete informações;
     - antes de processar a resposta, procurar citações no contexto/prompt;
-    - regular o nível(temperatura) de criatividade do modelo (para restringir aos critérios do prompt);
     - usar a self-consistency;
+- Regular o nível(temperatura) de criatividade do modelo (para restringir aos critérios do prompt);
 <br><br>
 <hr><br>
 
